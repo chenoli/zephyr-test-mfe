@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import { withZephyr } from 'vite-plugin-zephyr';
 import react from '@vitejs/plugin-react';
 import federation from '@originjs/vite-plugin-federation';
 
@@ -12,10 +13,12 @@ export default defineConfig({
         './Sidebar': './src/presentation/components/sidebar.tsx',
       },
       remotes: {
-        shared_store: 'http://localhost:5178/remoteEntry.js',
+        shared_store:
+          'https://oliveira-caco-h-gmail-com-5-shared-store-zephyr-t-fc13a8e35-ze.zephyrcloud.app/remoteEntry.js',
       },
       shared: ['react', 'react-dom', 'zustand'],
     }),
+    withZephyr(),
   ],
   server: {
     port: 5176,

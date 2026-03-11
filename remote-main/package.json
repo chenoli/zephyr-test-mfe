@@ -1,7 +1,7 @@
 {
   "name": "remote-main",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -14,7 +14,8 @@
     "lucide-react": "^0.577.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "zustand": "^5.0.11"
+    "zustand": "^5.0.11",
+    "design-system": "*"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
