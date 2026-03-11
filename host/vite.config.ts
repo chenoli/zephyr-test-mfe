@@ -10,9 +10,11 @@ export default defineConfig({
       name: 'host_app',
       remotes: {
         remote_main_app:
-          'https://oliveira-caco-h-gmail-com-3-remote-main-zephyr-te-d680cfc1a-ze.zephyrcloud.app/remoteEntry.js',
+          process.env.VITE_REMOTE_MAIN_APP_URL ||
+          'http://localhost:5175/remoteEntry.js',
         remote_sidebar_app:
-          'https://oliveira-caco-h-gmail-com-4-remote-sidebar-zephyr-b46fc4afc-ze.zephyrcloud.app/remoteEntry.js',
+          process.env.VITE_REMOTE_SIDEBAR_APP_URL ||
+          'http://localhost:5176/remoteEntry.js',
       },
       shared: ['react', 'react-dom', 'zustand'],
     }),

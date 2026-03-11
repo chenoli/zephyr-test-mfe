@@ -14,7 +14,8 @@ export default defineConfig({
       },
       remotes: {
         shared_store:
-          'https://oliveira-caco-h-gmail-com-5-shared-store-zephyr-t-fc13a8e35-ze.zephyrcloud.app/remoteEntry.js',
+          process.env.VITE_SHARED_STORE_URL ||
+          'http://localhost:5178/remoteEntry.js',
       },
       shared: ['react', 'react-dom', 'zustand'],
     }),
