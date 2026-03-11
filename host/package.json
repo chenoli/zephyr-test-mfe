@@ -1,0 +1,41 @@
+{
+  "name": "host",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "dev": "vite --port 5173",
+    "dev:main": "cd ../remote-main && npm run serve",
+    "dev:sidebar": "cd ../remote-sidebar && npm run serve",
+    "dev:design": "cd ../design-system && npm run dev -- --port 5177",
+    "dev:store": "cd ../shared-store && npm run serve",
+    "dev:all": "concurrently \"npm run dev\" \"npm run dev:design\" \"npm run dev:store\" \"npm run dev:main\" \"npm run dev:sidebar\" "
+  },
+  "dependencies": {
+    "@originjs/vite-plugin-federation": "^1.4.1",
+    "lottie-react": "^2.4.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zustand": "^5.0.11"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "autoprefixer": "^10.4.27",
+    "concurrently": "^9.2.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "postcss": "^8.5.8",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.48.0",
+    "vite": "^7.3.1"
+  }
+}
